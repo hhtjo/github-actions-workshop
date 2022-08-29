@@ -11,7 +11,7 @@ const prodConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: '/'
+        publicPath: '/github-actions-workshop/'
     },
     plugins: [
         new HtmlWebpackPlugin({
