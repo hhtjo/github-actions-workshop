@@ -38,7 +38,7 @@ jobs:
         run: echo "$MY_VARIABLE, $SECRET"
         env:
           MY_VARIABLE: Testvariabel!
-          SECRET: $PASSWORD
+          SECRET: ${{ secrets.PASSWORD }}
   deploy:
     needs: [build, test]
     runs-on: ubuntu-latest
