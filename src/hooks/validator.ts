@@ -61,7 +61,7 @@ const validateText = (text: string, testText: string): boolean => {
 
 const getPipelineAsText = async (): Promise<string> => {
     try {
-        const resp = await fetch('/build-pipeline.yml');
+        const resp = await fetch('/github-actions-workshop/build-pipeline.yml');
         return await resp.text();
     } catch {
         return 'false';
