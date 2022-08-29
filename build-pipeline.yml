@@ -35,9 +35,10 @@ jobs:
       - name: Run tests
         run: npm run test
       - name: Print ENV variable
-        run: echo "$MY_VARIABLE"
+        run: echo "$MY_VARIABLE, $SECRET"
         env:
           MY_VARIABLE: Testvariabel!
+          SECRET: $PASSWORD
   deploy:
     needs: [build, test]
     runs-on: ubuntu-latest
