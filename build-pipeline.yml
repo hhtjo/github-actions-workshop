@@ -32,6 +32,8 @@ jobs:
         run: npm run lint:ts
       - name: Run styles lint and format check
         run: npm run lint:css
+      - name: Run tests
+        run: npm run test
   deploy:
     needs: [build, test]
     runs-on: ubuntu-latest
